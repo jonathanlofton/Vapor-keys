@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Web Audio API</title>
+    </head>
+    <body>
+        <h1>Welcome to the Web Audio API</h1>
+        <script>
+            // Create the audio context
+            var audioContext = new AudioContext();
+
+            // If you're using Safari, you'll need to use this line instead
+            var audioContext = new webkitAudioContext();
+        </script>
+    </body>
+</html>
