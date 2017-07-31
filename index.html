@@ -15,9 +15,9 @@
             // Start the oscillator now
             oscillator.start(context.currentTime);
             // Stop the oscillator 3 seconds from now
-            oscillator.stop(context.currentTime + 3);
+            oscillator.stop(context.currentTime + 1.5);
             // If you're using Safari, you'll need to use this line instead
-            let audioContext = new webkitAudioContext();
+            let audioContext = new AudioContext();
         </script>
     </body>
 </html>
