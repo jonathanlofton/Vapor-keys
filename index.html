@@ -7,10 +7,17 @@
         <h1>Welcome to the Web Audio API</h1>
         <script>
             // Create the audio context
-            var audioContext = new AudioContext();
+            let context = new (window.AudioContext || window.webkitAudioContext)();
+              oscillator = context.createOscillator();
 
+            // Connect the oscillator to our speakers
+            oscillator.connect(context.destination);
+            // Start the oscillator now
+            oscillator.start(context.currentTime);
+            // Stop the oscillator 3 seconds from now
+            oscillator.stop(context.currentTime + 3);
             // If you're using Safari, you'll need to use this line instead
-            var audioContext = new webkitAudioContext();
+            let audioContext = new webkitAudioContext();
         </script>
     </body>
 </html>
