@@ -1,16 +1,71 @@
 <!doctype html>
 <html>
     <head>
-        <title>Web Audio API</title>
+        <title>Vapor Keys</title>
         <link rel="stylesheet" href="./css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
     </head>
     <body>
-        <h1>God have mercy on me...</h1>
-          <div data-key="65" class="key">
-            <h1>A</h1>
-            <span class="sound"></span>
+        <h1 class="head-title">Vapor Keys</h1>
+        <div class="keyboard-wrapper">
+          <div class="keyboard">
+            <div data-key="65" class="key">
+              <h1>A</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="83" class="key">
+              <h1>S</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="68" class="key">
+              <h1>D</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="70" class="key">
+              <h1>F</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="71" class="key">
+              <h1>G</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="72" class="key">
+              <h1>H</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="74" class="key">
+              <h1>J</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="75" class="key">
+              <h1>K</h1>
+              <span class="sound"></span>
+            </div>
+            <div data-key="76" class="key">
+              <h1>L</h1>
+              <span class="sound"></span>
+            </div>
           </div>
-          <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        </div>
+
+
+
+        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="68" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="70" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="71" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="72" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="74" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="75" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="76" src="assets/808-long-hard-12.wav"></audio>
+
+        <footer>
+        </footer>
+
+
+        <!-- <script src="bundle.js" /> -->
         <script>
           window.addEventListener('keydown', (e) => {
             console.log(e.keyCode);
