@@ -4,7 +4,7 @@
         <title>Vapor Keys</title>
         <link rel="stylesheet" href="./css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-
+        <script src="bundle.js"></script>
     </head>
     <body>
         <h1 class="head-title">Vapor Keys</h1>
@@ -47,34 +47,26 @@
               <span class="sound"></span>
             </div>
           </div>
-        </div>
 
 
 
-        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="68" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="70" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="71" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="72" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="74" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="75" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="76" src="assets/808-long-hard-12.wav"></audio>
+        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3" id="myAudio"></audio>
+        <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="68" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="70" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="71" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="72" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="74" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="75" src="assets/rick-ross-gruntmp3.mp3" ></audio>
+        <audio data-key="76" src="assets/808-long-hard-12.wav" ></audio>
+
+
+
 
         <footer>
+          <canvas id="canvas" width=635px height=200px></canvas>
         </footer>
 
-
-        <!-- <section class="main-controls">
-          <canvas class="visualizer" height="60px"></canvas>
-          <div id="buttons">
-            <button class="record">Record</button>
-            <button class="stop">Stop</button>
-          </div>
-        </section> -->
-
-
-        <!-- <script src="bundle.js" /> -->
         <script>
           window.addEventListener('keydown', (e) => {
             console.log(e.keyCode);
@@ -95,5 +87,7 @@
           const keys = document.querySelectorAll('.key');
           keys.forEach(key => key.addEventListener('transitionend', removeTransition))
         </script>
+        <script src="js/visualizer.js"></script>
+
     </body>
 </html>
