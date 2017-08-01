@@ -2,36 +2,34 @@
 <html>
     <head>
         <title>Web Audio API</title>
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-        <h1>Welcome to the Web Audio API</h1>
-        <button className="rick-ross-sound">Ross Button</button>
+        <h1>God have mercy on me...</h1>
+          <div data-key="65" class="key">
+            <h1>A</h1>
+            <span class="sound"></span>
+          </div>
+          <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
         <script>
-            let request = new XMLHttpRequest();
+          window.addEventListener('keydown', (e) => {
+            console.log(e.keyCode);
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            if(!audio) return; // stop the function
+            audio.currentTime = 0; // rewing to the start
+            audio.play();
+            key.classList.add('playing');
+          })
 
-            request.open('GET', './assets/rick-ross-gruntmp3.mp3', true);
-            request.responseType = 'arraybuffer';
+          removeTransition = (e) => {
+            if (e.type === 'transitionend') {
+              e.target.classList.remove('playing')
+            }
+          }
 
-            request.onload = () => {
-                let undecodedAudio = request.response;
-                context.decodeAudioData(undecodedAudio, function (buffer) {
-                // The contents of our mp3 is now an AudioBuffer
-                var sourceBuffer = context.createBufferSource();
-
-              // Tell the AudioBufferSourceNode to use this AudioBuffer.
-              sourceBuffer.buffer = buffer;
-            });
-            };
-
-            audio_file.onchange = function(){
-              var files = this.files;
-              var file = URL.createObjectURL(files[0]);
-                audio_player.src = file;
-                audio_player.play();
-              };
-
-            request.send();
-
+          const keys = document.querySelectorAll('.key');
+          keys.forEach(key => key.addEventListener('transitionend', removeTransition))
         </script>
     </body>
 </html>

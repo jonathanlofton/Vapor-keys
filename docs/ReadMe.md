@@ -28,7 +28,7 @@ This project will be implemented with the following technologies:
 
 **Day 1**
 
-Have keyboard press produce sound.
+Have folder structure made and have the keyboard press produce sound.
 
 **Day 2**
 
@@ -41,7 +41,7 @@ Try and add sound loop to design.
 
 ### Bonus features
 
-There are many directions this sequencer could go.  Some anticipated updates are:
+I would like to be able to add these features at some point.
 
 - [ ] Layer beat loops on top of each other
 - [ ] Add multiple sound sets
