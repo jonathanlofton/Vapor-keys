@@ -5,21 +5,25 @@ let ctx = canvas.getContext("2d");
 let analyser = context.createAnalyser();
 
 arrayOfSound = ["assets/rick-ross-gruntmp3.mp3", "assets/boomin-rimshot-hard.wav"]
-
+const keyCodes = []
 
 
 
 window.addEventListener('keydown', (e) => {
   let src;
-  // console.log(e)
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  // console.log(audio)
 
-  if (!src) {
-    src = context.createMediaElementSource(audio);
+  // create mediaelementsource for context and connect to
+  // analyser if key hasn't been pressed yet.
+  if (!keyCodes.includes(e.keyCode)) {
+      src = context.createMediaElementSource(audio);
+      src.connect(analyser);
   }
+  // add keycode to exclude list for creating a media element
+  keyCodes.push(e.keyCode);
 
-  src.connect(analyser);
+
+
   analyser.connect(context.destination);
 
   analyser.fftSize = 256;
