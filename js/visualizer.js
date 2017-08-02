@@ -1,18 +1,23 @@
 
 let context = new AudioContext();
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let analyser = context.createAnalyser();
+
+arrayOfSound = ["assets/rick-ross-gruntmp3.mp3", "assets/boomin-rimshot-hard.wav"]
+
+
+
 
 window.addEventListener('keydown', (e) => {
+  let src;
+  // console.log(e)
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  console.log(audio)
+  // console.log(audio)
 
-
-
-  let src = context.createMediaElementSource(audio);
-  let analyser = context.createAnalyser();
-  console.log(src)
-
-  let canvas = document.getElementById("canvas");
-  let ctx = canvas.getContext("2d");
+  if (!src) {
+    src = context.createMediaElementSource(audio);
+  }
 
   src.connect(analyser);
   analyser.connect(context.destination);
