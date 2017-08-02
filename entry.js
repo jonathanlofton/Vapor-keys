@@ -1,24 +1,26 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let ctx = new AudioContext();
+  let context = new AudioContext();
   let audio = document.getElementById('myAudio');
-  let audioSrc = ctx.createMediaElementSource(audio);
-  let analyser = ctx.createAnalyser();
-  let canvas = document.getElementById("canvas");
-  let context = canvas.getContext("2d");
+  let src = context.createMediaElementSource(audio);
+  let analyser = context.createAnalyser();
 
-  audioSrc.connect(analyser);
-  audioSrc.connect(ctx.destination);
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+
+  src.connect(analyser);
+  analyser.connect(context.destination);
 
   analyser.fftSize = 256;
 
-  let frequencyData = new Uint8Array(analyser.frequencyBinCount);
+  let dataArray = new Uint8Array(analyser.frequencyBinCount);
+  let bufferLength = analyser.frequencyBinCount;
 
   var WIDTH = canvas.width;
   var HEIGHT = canvas.height;
 
-  let bufferLength = analyser.frequencyBinCount;
+
   console.log(bufferLength)
 
   let barWidth = ( WIDTH / bufferLength) * 2.5;
@@ -30,20 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     x = 0;
 
-    analyser.getByteFrequencyData(frequencyData);
+    analyser.getByteFrequencyData(dataArray);
 
-    context.fillStyle = "#000";
-    context.fillRect(0, 0, WIDTH, HEIGHT);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
     for (let i = 0; i < bufferLength; i ++) {
-      barHeight = frequencyData[i];
+      barHeight = dataArray[i];
 
       let r = barHeight + (25 * (i/bufferLength));
-      let g = 250 * (i/bufferLength);
-      let b = 50;
+      let g = 105 * (i/bufferLength);
+      let b = 180;
 
-      context.fillStyle = `rgb(${r}, ${g}, ${b})`;
-      context.fillRect(x, HEIGHT - barHeight, barWidth, barHeight)
+      ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+      ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight)
+
+      x += barWidth + 1;
     }
   }
 

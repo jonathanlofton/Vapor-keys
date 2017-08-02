@@ -7,6 +7,7 @@
         <script src="bundle.js"></script>
     </head>
     <body>
+      <div class="content">
         <h1 class="head-title">Vapor Keys</h1>
         <div class="keyboard-wrapper">
           <div class="keyboard">
@@ -49,8 +50,10 @@
           </div>
 
 
+        </div>
+        <canvas id="canvas" width=635px height=200px></canvas>
 
-        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3" id="myAudio"></audio>
+        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3" ></audio>
         <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3" ></audio>
         <audio data-key="68" src="assets/rick-ross-gruntmp3.mp3" ></audio>
         <audio data-key="70" src="assets/rick-ross-gruntmp3.mp3" ></audio>
@@ -58,36 +61,12 @@
         <audio data-key="72" src="assets/rick-ross-gruntmp3.mp3" ></audio>
         <audio data-key="74" src="assets/rick-ross-gruntmp3.mp3" ></audio>
         <audio data-key="75" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="76" src="assets/808-long-hard-12.wav" ></audio>
+        <audio data-key="76" src="assets/808-long-hard-12.wav" id="myAudio"></audio>
 
 
 
 
-        <footer>
-          <canvas id="canvas" width=635px height=200px></canvas>
-        </footer>
 
-        <script>
-          window.addEventListener('keydown', (e) => {
-            console.log(e.keyCode);
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-            if(!audio) return; // stop the function
-            audio.currentTime = 0; // rewing to the start
-            audio.play();
-            key.classList.add('playing');
-          })
-
-          removeTransition = (e) => {
-            if (e.type === 'transitionend') {
-              e.target.classList.remove('playing')
-            }
-          }
-
-          const keys = document.querySelectorAll('.key');
-          keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-        </script>
-        <script src="js/visualizer.js"></script>
-
+        <script src="js/sound.js"></script>
     </body>
 </html>

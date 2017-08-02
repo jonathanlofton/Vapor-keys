@@ -3,29 +3,21 @@
   text-align: center;
   font-size: 5em;
   font-family: 'Permanent Marker', cursive;
-  position: absolute;
-  top: 0;
-  bottom: 85%;
-  left: 0;
-  right: 0;
 }
 
 .keyboard-wrapper {
-  position: absolute;
-  top: 15%;
-  bottom: 15%;
-  left: 0;
-  right: 0;
+  width: 635px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px;
 }
 
 .keyboard {
   padding: 30px;
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 100%;
   background: rgba(0,0,0, 0.2);
 }
 
@@ -34,30 +26,32 @@
   font-size: 16px;
   background: #FF69B4;
   color: white;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border: 5px solid #FF69B4;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: border 0.1s;
-  margin: 10px;
+  margin: 5px;
 }
-
-
 
 .playing {
   border: 1px solid #FF69B4;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 footer {
-  position: absolute;
-  top: 85%;
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 #canvas {
-  background: lightblue;
 }
