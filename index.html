@@ -5,68 +5,49 @@
         <link rel="stylesheet" href="./css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <script src="bundle.js"></script>
+
     </head>
     <body>
       <div class="content">
         <h1 class="head-title">Vapor Keys</h1>
         <div class="keyboard-wrapper">
           <div class="keyboard">
-            <div data-key="65" class="key">
-              <h1>A</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="83" class="key">
-              <h1>S</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="68" class="key">
-              <h1>D</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="70" class="key">
-              <h1>F</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="71" class="key">
-              <h1>G</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="72" class="key">
-              <h1>H</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="74" class="key">
-              <h1>J</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="75" class="key">
-              <h1>K</h1>
-              <span class="sound"></span>
-            </div>
-            <div data-key="76" class="key">
-              <h1>L</h1>
-              <span class="sound"></span>
-            </div>
+            <div data-key="65" class="key">Grunt</div>
+            <div data-key="83" class="key">Grunt</div>
+            <div data-key="68" class="key">Rim Shot</div>
+            <div data-key="70" class="key">Clap</div>
+            <div data-key="71" class="key">Crash</div>
+            <div data-key="72" class="key">Bad</div>
+            <div data-key="74" class="key">808 1</div>
+            <div data-key="75" class="key">808 2</div>
+            <div data-key="76" class="key">808 3</div>
           </div>
-
-
         </div>
-        <canvas id="canvas" width=635px height=200px></canvas>
+        <!--
+          Canvas for rendering the audio visualizer onto
+        -->
+        <canvas id="canvas" width=685px height=200px></canvas>
 
-        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="68" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="70" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="71" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="72" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="74" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="75" src="assets/rick-ross-gruntmp3.mp3" ></audio>
-        <audio data-key="76" src="assets/808-long-hard-12.wav" id="myAudio"></audio>
+        <!--
+         audio tags with sound samples that are associated with the
+         keys above through the data-key number that both have
+        -->
+        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="83" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="68" src="assets/boomin-rimshot-hard.wav" ></audio>
+        <audio data-key="70" src="assets/boomin-clap-2.wav" ></audio>
+        <audio data-key="71" src="assets/boomin-crash-delay.wav"></audio>
+        <audio data-key="72" src="assets/pop-bad-things.wav"></audio>
+        <audio data-key="74" src="assets/808-short-soft-6.wav"></audio>
+        <audio data-key="75" src="assets/boomin-808-3-short.wav"></audio>
+        <audio data-key="76" src="assets/808-long-hard-12.wav"></audio>
 
 
 
 
 
-        <script src="js/sound.js"></script>
+
     </body>
+    <script src="js/sound.js"></script>
+    <script src="js/visualizer.js"></script>
 </html>
