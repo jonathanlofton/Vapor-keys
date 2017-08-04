@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="./css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <script src="bundle.js"></script>
-
+        <script>const context =  new (window.AudioContext || window.webkitAudioContext)();</script>
     </head>
     <body>
       <div class="content">
@@ -13,7 +13,7 @@
           <h1 class="head-title">Vapor Keys</h1>
           <div class="keyboard-wrapper">
             <div class="keyboard">
-              <div class="row">
+              <div class="top-row">
                 <div data-key="" class="key"></div>
                 <div data-key="" class="key"></div>
                 <div data-key="" class="key"></div>
@@ -25,7 +25,7 @@
                 <div data-key="" class="key"></div>
                 <div data-key="" class="key"></div>
               </div>
-              <div class="row">
+              <div class="middle-row">
                 <div data-key="65" class="key">Grunt</div>
                 <div data-key="83" class="key">Triangle</div>
                 <div data-key="68" class="key">Rim Shot</div>
@@ -36,7 +36,8 @@
                 <div data-key="75" class="key">808 2</div>
                 <div data-key="76" class="key">808 3</div>
               </div>
-              <div class="row">
+              <div class="bottom-row">
+                <div data-key="" class="shift-key">Record</div>
                 <div data-key="" class="key"></div>
                 <div data-key="" class="key"></div>
                 <div data-key="" class="key"></div>
@@ -48,10 +49,17 @@
             </div>
           </div>
         </div>
+
+        <div id="instructions" class="modal">
+          <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <p>Use headphones for best experience.</p>
+          </div>
+        </div>
         <!--
           Canvas for rendering the audio visualizer onto
         -->
-        <canvas id="canvas" width=685px height=200px></canvas>
+        <canvas id="canvas" width=685px height=100px></canvas>
 
         <!--
          audio tags with sound samples that are associated with the
@@ -74,4 +82,5 @@
     </body>
     <script src="js/sound.js"></script>
     <script src="js/visualizer.js"></script>
+    <script src="js/recorder.js"></script>
 </html>

@@ -8,6 +8,7 @@ VaporKeys is an electric keyboard emulator. Utilizing the keyboard on your own c
 
 - [ ] Render a keyboard on the screen
 - [ ] Keys play sounds when pressed
+- [ ] Keys produce a visualization
 - [ ] Can play a custom soundtrack on a loop
 - [ ] A production README
 

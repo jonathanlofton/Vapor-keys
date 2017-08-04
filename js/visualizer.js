@@ -1,5 +1,4 @@
 
-let context = new AudioContext();
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let analyser = context.createAnalyser();
@@ -31,7 +30,7 @@ window.addEventListener('keydown', (e) => {
 
   analyser.connect(context.destination);
   //
-  analyser.fftSize = 512;
+  analyser.fftSize = 256;
   // an array of 8-bit unsigned integers
   let dataArray = new Uint8Array(analyser.frequencyBinCount);
   let bufferLength = analyser.frequencyBinCount;
@@ -66,12 +65,12 @@ window.addEventListener('keydown', (e) => {
       barHeight = dataArray[i];
 
       // unique colors depending on the height of the bar
-      let r = barHeight + (10 * (i/bufferLength));
-      let g = 20 * (i/bufferLength);
-      let b = 200;
+      let r = barHeight + (0 * (i/bufferLength));
+      let g = 0 * (i/bufferLength);
+      let b = 0;
 
       ctx.fillStyle = `rgb(${r}, ${g}, ${b}`;
-      ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight)
+      ctx.fillRect(x,HEIGHT - barHeight, barWidth, barHeight)
 
       x += barWidth + 1;
     }
