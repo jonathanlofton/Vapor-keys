@@ -16,6 +16,8 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "express": "4.15.3",
+    "grunt-cli": "^1.2.0",
     "react": "^15.6.1",
     "recorder-js": "^1.0.7",
     "webpack": "^3.4.1"
