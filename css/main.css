@@ -13,7 +13,7 @@ body, p, h1 {
   text-shadow: 5px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   animation: blink linear infinite 8s;
 }
-
+/*
 @keyframes blink {
   0% { color: #E75480; }
   20% { color: rgba(255,105,180, 0.7);}
@@ -27,10 +27,16 @@ body, p, h1 {
   62% { color: rgba(255,105,180, 0.7);}
   63% { color: rgba(30, 30, 30, 0.5);}
   64% { color: rgba(255,105,180, 0.7);}
-  65% { color: rgba(30, 30, 30, 0.5);}
+  65% { color: white;}
   66% { color: rgba(255,105,180, 0.7);}
 
   100% { color: #E75480; }
+}*/
+
+@keyframes blink {
+  0% { color: black; }
+  50% { color: rgba(255,105,180, 0.7);}
+  100% { color: black; }
 }
 
 .keyboard-wrapper {
@@ -57,6 +63,7 @@ body, p, h1 {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  border-radius: 20px;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
@@ -73,10 +80,11 @@ body, p, h1 {
 
 .bottom-row {
   position: relative;
-  right: 13%;
+  right: 6%;
 }
 
 .key {
+  border-radius: 5px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -95,27 +103,8 @@ body, p, h1 {
   margin: 5px;
 }
 
-.shift-key {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: helvetica, sans-serif;
-  font-size: 15px;
-  background: rgba(255,105,180, 0.7);
-  color: white;
-  width: 100px;
-  height: 50px;
-  border: 5px solid rgba(255,105,180, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: border 0.1s;
-  margin: 5px;
-}
-
 .playing {
-  border: 1px solid rgba(255,105,180, 0.7);
+  transform: scale(0.8);
 }
 
 .content {
@@ -173,4 +162,14 @@ body, p, h1 {
 
 .hidden {
   display: none;
+}
+
+.personal-info, a {
+  margin: 5px 30px;
+  color: black;
+  transition: color 0.7s;
+}
+
+.personal-info, a:hover {
+  color: rgba(255,105,180, 0.7);
 }

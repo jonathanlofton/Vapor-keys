@@ -3,6 +3,7 @@
     <head>
         <title>Vapor Keys</title>
         <link rel="stylesheet" href="./css/main.css">
+        <script src="https://use.fontawesome.com/0dc58fe6c9.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <script src="bundle.js"></script>
         <script>const context =  new (window.AudioContext || window.webkitAudioContext)();</script>
@@ -14,21 +15,21 @@
           <div class="keyboard-wrapper">
             <div class="keyboard">
               <div class="top-row">
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
+                <div data-key="81" class="key">Tom 1</div>
+                <div data-key="87" class="key">Tom 2</div>
+                <div data-key="69" class="key">Tom 3</div>
+                <div data-key="82" class="key">Hat 1</div>
+                <div data-key="84" class="key">Hat 2</div>
+                <div data-key="89" class="key">Hat 3</div>
+                <div data-key="85" class="key"></div>
+                <div data-key="73" class="key"></div>
+                <div data-key="79" class="key"></div>
+                <div data-key="80" class="key"></div>
               </div>
               <div class="middle-row">
-                <div data-key="65" class="key">Grunt</div>
-                <div data-key="83" class="key">Triangle</div>
-                <div data-key="68" class="key">Rim Shot</div>
+                <div data-key="65" class="key">Snare 1</div>
+                <div data-key="83" class="key">Snare 2</div>
+                <div data-key="68" class="key">Snare 3</div>
                 <div data-key="70" class="key">Crash</div>
                 <div data-key="71" class="key">Clap</div>
                 <div data-key="72" class="key">Snap</div>
@@ -37,14 +38,13 @@
                 <div data-key="76" class="key">808 3</div>
               </div>
               <div class="bottom-row">
-                <div data-key="" class="shift-key">Record</div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
-                <div data-key="" class="key"></div>
+                <div data-key="90" class="key">Grunt</div>
+                <div data-key="88" class="key"></div>
+                <div data-key="67" class="key"></div>
+                <div data-key="86" class="key"></div>
+                <div data-key="66" class="key"></div>
+                <div data-key="78" class="key"></div>
+                <div data-key="77" class="key"></div>
               </div>
             </div>
           </div>
@@ -65,15 +65,50 @@
          audio tags with sound samples that are associated with the
          keys above through the data-key number that both have
         -->
-        <audio data-key="65" src="assets/rick-ross-gruntmp3.mp3"></audio>
-        <audio data-key="83" src="assets/boomin-triangle.wav"></audio>
-        <audio data-key="68" src="assets/boomin-rimshot-hard.wav" ></audio>
+
+        <!-- top row -->
+        <audio data-key="81" src="assets/MT00.WAV"></audio>
+        <audio data-key="87" src="assets/MT10.WAV"></audio>
+        <audio data-key="69" src="assets/MT25.WAV" ></audio>
+        <audio data-key="82" src="assets/OH00.WAV" ></audio>
+        <audio data-key="84" src="assets/OH10.WAV"></audio>
+        <audio data-key="89" src="assets/OH50.WAV"></audio>
+        <audio data-key="85" src=""></audio>
+        <audio data-key="73" src=""></audio>
+        <audio data-key="79" src=""></audio>
+        <audio data-key="80" src=""></audio>
+        <!-- middle row  -->
+        <audio data-key="65" src="assets/SD0000.WAV"></audio>
+        <audio data-key="83" src="assets/SD0010.WAV"></audio>
+        <audio data-key="68" src="assets/SD0075.WAV" ></audio>
         <audio data-key="70" src="assets/boomin-crash-delay.wav" ></audio>
         <audio data-key="71" src="assets/boomin-clap-2.wav"></audio>
         <audio data-key="72" src="assets/boomin-snap.wav"></audio>
-        <audio data-key="74" src="assets/boomin-kick.wav"></audio>
-        <audio data-key="75" src="assets/808-short-soft-6.wav"></audio>
-        <audio data-key="76" src="assets/boomin-808-3-short.wav"></audio>
+        <audio data-key="74" src="assets/BD0000.WAV"></audio>
+        <audio data-key="75" src="assets/BD0010.WAV"></audio>
+        <audio data-key="76" src="assets/BD0050.WAV"></audio>
+        <!-- bottom row -->
+        <audio data-key="90" src="assets/rick-ross-gruntmp3.mp3"></audio>
+        <audio data-key="88" src=""></audio>
+        <audio data-key="67" src="" ></audio>
+        <audio data-key="86" src="" ></audio>
+        <audio data-key="66" src=""></audio>
+        <audio data-key="78" src=""></audio>
+        <audio data-key="77" src=""></audio>
+
+        <div class="personal-info">
+          <a href="https://github.com/jonathanlofton/Vapor-keys"
+          title="Github"
+          target="_blank">
+          <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jonathan-lofton-339670102/"
+            target="_blank"
+            title="LinkedIn" >
+            <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+          </a>
+        </div>
 
 
 

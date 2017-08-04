@@ -11,12 +11,9 @@ window.addEventListener('keydown', (e) => {
   // rewind to the start
   audio.currentTime = 0;
   audio.play();
-  console.log(key.classList)
   if (!key.classList.contains('playing')) {
     key.classList.add('playing');
   }
-
-  console.log(key.classList)
 }, false)
 
 window.addEventListener('keyup', (e) => {

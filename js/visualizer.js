@@ -3,7 +3,8 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let analyser = context.createAnalyser();
 const keyCodeExcludeList = []
-const availableKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76]
+const availableKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80,
+90, 88, 67, 86, 66, 78, 77]
 
 
 
