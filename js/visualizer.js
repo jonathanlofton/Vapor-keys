@@ -52,7 +52,7 @@ window.addEventListener('keydown', (e) => {
 
     x = 0;
     // updates the dataArray with the current
-    // frequency (Hz I believe) and uses that
+    // frequency and uses that
     // value to update the height of the bar
     analyser.getByteFrequencyData(dataArray);
     ctx.fillStyle = "white"
@@ -66,9 +66,9 @@ window.addEventListener('keydown', (e) => {
       barHeight = dataArray[i];
 
       // unique colors depending on the height of the bar
-      let r = barHeight + (0 * (i/bufferLength));
-      let g = 0 * (i/bufferLength);
-      let b = 0;
+      let r = barHeight + (25 * (i/bufferLength));
+      let g = 50 * (i/bufferLength);
+      let b = 100;
 
       ctx.fillStyle = `rgb(${r}, ${g}, ${b}`;
       ctx.fillRect(x,HEIGHT - barHeight, barWidth, barHeight)
