@@ -11,29 +11,11 @@ body, p, h1 {
   color: rgb(30, 30, 30);
   /*text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em white, 0 0 0.5em white, 0 0 0.1em white;*/
   text-shadow: 5px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-  animation: blink linear infinite 8s;
+  animation: wave linear infinite 8s;
 }
-/*
-@keyframes blink {
-  0% { color: #E75480; }
-  20% { color: rgba(255,105,180, 0.7);}
-  25% { color: #E75480; }
-  50% { color: rgba(255,105,180, 0.7);}
-  51% { color: rgba(30, 30, 30, 0.5);}
-  52% { color: rgba(255,105,180, 0.7);}
-  53% { color: rgba(30, 30, 30, 0.5);}
-  60% { color: rgba(255,105,180, 0.7);}
-  61% { color: rgba(30, 30, 30, 0.5);}
-  62% { color: rgba(255,105,180, 0.7);}
-  63% { color: rgba(30, 30, 30, 0.5);}
-  64% { color: rgba(255,105,180, 0.7);}
-  65% { color: white;}
-  66% { color: rgba(255,105,180, 0.7);}
 
-  100% { color: #E75480; }
-}*/
 
-@keyframes blink {
+@keyframes wave {
   0% { color: black; }
   50% { color: rgba(255,105,180, 0.7);}
   100% { color: black; }
