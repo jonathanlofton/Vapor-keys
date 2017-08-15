@@ -47,7 +47,6 @@ let renderFrame = () => {
 ### Future features
 
 I would like to be able to add these features at some point.
-- [ ] Layer beat loops on top of each other
 - [ ] Add multiple sound sets
 - [ ] Allow users to record and download there audio samples
 - [ ] Incorporate a backend and include users

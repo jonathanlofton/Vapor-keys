@@ -1,6 +1,6 @@
 
 let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
+let contex = canvas.getContext("2d");
 let analyser = context.createAnalyser();
 const keyCodeExcludeList = []
 const availableKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80,
@@ -31,7 +31,7 @@ window.addEventListener('keydown', (e) => {
 
   analyser.connect(context.destination);
   //
-  analyser.fftSize = 256;
+  analyser.fftSize = 128;
   // an array of 8-bit unsigned integers
   let dataArray = new Uint8Array(analyser.frequencyBinCount);
   let bufferLength = analyser.frequencyBinCount;
@@ -55,23 +55,18 @@ window.addEventListener('keydown', (e) => {
     // frequency and uses that
     // value to update the height of the bar
     analyser.getByteFrequencyData(dataArray);
-    ctx.fillStyle = "white"
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+    contex.fillStyle = "white"
+    contex.fillRect(0, 0, WIDTH, HEIGHT);
 
-    // bufferLength is going to be the number of
-    // of frequencies listed in the frequencyBinCount
+    // Credit to Nick Jones for how to render the frequencies
+    // https://codepen.io/awesomecoding/pen/rVBaab?editors=0010
     for (let i = 0; i < bufferLength; i ++) {
       // depending on the frequency value the height of
       // each bar is determined
+
       barHeight = dataArray[i];
-
-      // unique colors depending on the height of the bar
-      let r = barHeight + (25 * (i/bufferLength));
-      let g = 50 * (i/bufferLength);
-      let b = 100;
-
-      ctx.fillStyle = `rgb(${r}, ${g}, ${b}`;
-      ctx.fillRect(x,HEIGHT - barHeight, barWidth, barHeight)
+      contex.fillStyle = `black`;
+      contex.fillRect(x,HEIGHT - barHeight, barWidth, barHeight)
 
       x += barWidth + 1;
     }

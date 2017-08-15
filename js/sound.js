@@ -1,3 +1,6 @@
+// this down variable is to ensure
+// key spamming doesn't break the apps
+// key transitions
 let down = false;
 
 window.addEventListener('keydown', (e) => {
