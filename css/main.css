@@ -95,7 +95,7 @@ body, p, h1 {
   width: 80%;
 }
 
-#instructions {
+.instructions {
   z-index: 2;
 }
 
@@ -129,8 +129,7 @@ body, p, h1 {
   text-align: center;
 }
 
-#modal-close {
-  align-self: flex-start;
+.closeModal {
   margin: 10px;
 }
 
