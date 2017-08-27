@@ -65,7 +65,11 @@ window.addEventListener('keydown', (e) => {
       // each bar is determined
 
       barHeight = dataArray[i];
-      contex.fillStyle = `black`;
+      let r = barHeight + (25 * (i/bufferLength));
+      let g = 250 * (i/bufferLength);
+      let b = 50;
+
+      contex.fillStyle = `rgb(${r},${g},${b})`;
       contex.fillRect(x,HEIGHT - barHeight, barWidth, barHeight)
 
       x += barWidth + 1;
