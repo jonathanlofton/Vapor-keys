@@ -1,6 +1,8 @@
 # Vapor Keys
 [Vapor Keys](https://vapor-keys.herokuapp.com/) is a keyboard emulator for making beats.
 
+![Demo Play](/assets/images/vapor-keys-gif.gif)
+
 
 With vapor keys you can let your creativity flow from your brain to your finger tips and create art! This art could be the music you produce, but if that music isn't that great your art will be the cool visualizations that are produced on each key stroke!
 

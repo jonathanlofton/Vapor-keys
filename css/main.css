@@ -125,12 +125,18 @@ body, p, h1 {
   font-size: 1.3em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .modal-content p {
   width: 100%;
   text-align: center;
+}
+
+#modal-close {
+  align-self: flex-start;
+  margin-left: 10px;
 }
 
 .closeModal {
