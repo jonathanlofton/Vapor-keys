@@ -19,6 +19,7 @@
     "express": "4.15.3",
     "grunt-cli": "^1.2.0",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "recorder-js": "^1.0.7",
     "webpack": "^3.4.1"
   },
